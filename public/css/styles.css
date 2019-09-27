@@ -1,0 +1,147 @@
+.carousel {
+  margin: auto;
+  width: 350px;
+  height:500px;
+  padding-top: 100px;
+}
+.carousel-inner {
+    border-top: 5px;
+    border-left: 5px;
+    border-right: 5px;
+    border-bottom: 5px;
+    border-color: #fff;
+    background-color: #505050;
+}
+
+/* HOME 2 here  #A9A9A9; */
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #505050;
+  color: grey;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 300px;
+}
+
+.button1 {
+  padding: 150px 100px;
+  border-radius: 10px;
+  color: black;
+  background-color: black;
+  border: solid;
+  padding-top: 100px;
+  position:relative;
+  height:20px;
+  width:150px;
+  margin: -20px -50px;
+  top:40%;
+  left:30%;
+  right: 20%;
+}
+.button1:hover {
+  background-color: darkblue;
+}
+
+
+.destroy:hover {
+background-color: #D3D3D3;
+}
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  padding: 50px:
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202020;
+  color: white;
+  text-align: center;
+
+}
+
+
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+
+.test {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.servcard {
+  margin-top: 15px;
+  margin-left: 15px;
+  margin: 15px:
+  display:flex;
+}
+
+
+.button-rnd{
+  border-radius: 50%;
+  color: white;
+  font-size: 20px
+  font-weight: bold;
+  padding: 5px;
+}
+
+
+.add_field_button{
+  background-color: green;
+  border-color: green;
+}
+
+.add_field_button:hover {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}

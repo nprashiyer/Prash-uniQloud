@@ -1,0 +1,86 @@
+<%- include('partials/header') %>
+
+    <div class="servcard">
+
+      <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Platform</th>
+              <th scope="col" colspan="2">Server Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">OS</th>
+              <th scope="col">Action</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <th scope="row">1</th>
+              <td>AWS</td>
+              <td colspan="2">Server 1</td>
+              <td>India</td>
+              <td>win2k16</td>
+              <td><button class="btn btn-danger" type="button" name="button">Terminate</button></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Azure</td>
+              <td colspan="2">Server 2</td>
+              <td>Europe</td>
+              <td>win2k19</td>
+              <td><button class="btn btn-danger" type="button" name="button">Terminate</button></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>GCP</td>
+              <td colspan="2">Server 3</td>
+              <td>Germany</td>
+              <td>Ubuntu</td>
+              <td><button class="btn btn-danger" type="button" name="button">Terminate</button></td>
+            </tr> -->
+
+            <%  var counter = 1;  %>
+              <% orderList.forEach(function(order){  %>
+                <tr>
+                  <th scope="row"><%=counter%></th>
+                  <td><%=order.platform%></td>
+                  <td class="srvname" colspan="2"><%= order.name %></td>
+                  <td><%=order.location %></td>
+                  <td><%=order.os %></td>
+                  <td><button class="btn btn-danger" type="button" name="button">Terminate</button></td>
+                  <td><input data-toggle="modal" data-target="#myModal2" class="destroy" type="image" name="imagebtn" src="media/garbage.svg" style="width:25px;border-radius:50%;"></td>
+                </tr>
+                </div>
+                <%  counter++;  %>
+              <%  })  %>
+            <!-- v2 ENDS here -->
+          </tbody>
+          </table>
+    <script src="scripts/remove.js"></script>
+
+    <!-- MODAL START -->
+
+    <form action="/del" method="post">
+      <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #007bff">
+              <h6 class="modal-title" style="color:black" id="myModalLabel">Delete Confirmation</h6>
+            </div>
+            <div class="modal-body">
+              <p class="modal-delete">Are you sure you want to delete?</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-danger delserver" type="submit" name="servername" value="yamaha"> &#160;&#160; OK &#160;&#160; </button>
+              <button class="btn btn-secondary" data-dismiss="modal" type="button" name="button">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <!-- MODAL END -->
+
+
+<%- include('partials/footer') %>
