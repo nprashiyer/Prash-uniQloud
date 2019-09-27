@@ -139,13 +139,18 @@ app.post("/", function(req,res){
   console.log("Error");
 }
 
-request.post({
-      headers: {'Content-Type': 'application/json'},
-      url: myurl,
-      body: l
-  }, function(error, response, body){
-    console.log(body);
-  });
+  
+//   DISABLED TOWER API CALL
+  
+// request.post({
+//       headers: {'Content-Type': 'application/json'},
+//       url: myurl,
+//       body: l
+//   }, function(error, response, body){
+//     console.log(body);
+//   });
+  
+//   DISABLE ENDS HERE
 
 res.render("submit",{vmname: vmname});
 
