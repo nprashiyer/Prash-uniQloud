@@ -10,7 +10,7 @@ The idea behind this portal is to design a simplistic and non-technical one-stop
 Front End - HTML, CSS, JavaScript, JQuery \
 Server Side - NodeJS, Express \
 DB - MongoDB \
-The backend server build orchetration is carried out using Ansible Tower/AWX. 
+The  server build orchetration is carried out using Ansible Tower/AWX using Ansible and Terraform. 
 
 
 <b>Portal Walk-through:</b>
